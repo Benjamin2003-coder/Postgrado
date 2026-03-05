@@ -1,0 +1,796 @@
+/* ========================================
+   MAIN.CSS - ESTILOS ESPECÍFICOS DEL FRONTEND
+   UNEFA Postgrado - Nueva Esparta
+   ======================================== */
+
+/* Importar estilos base desde public/css */
+@import url('../../../public/css/style.css');
+
+/* ========================================
+   VARIABLES ESPECÍFICAS DEL FRONTEND
+   ======================================== */
+:root {
+    --frontend-primary: #8B1E3F;
+    --frontend-secondary: #F2A900;
+    --frontend-dark: #1E1E1E;
+    --frontend-light: #F8F9FA;
+    --frontend-gradient: linear-gradient(135deg, #8B1E3F 0%, #6a1730 100%);
+    --frontend-shadow: 0 5px 20px rgba(139, 30, 63, 0.1);
+}
+
+/* ========================================
+   LAYOUT DEL FRONTEND
+   ======================================== */
+.frontend-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.frontend-main {
+    flex: 1;
+    margin-top: 80px; /* Espacio para el header fijo */
+    padding: 2rem 0;
+}
+
+/* ========================================
+   PÁGINA DE INICIO (HOME)
+   ======================================== */
+
+/* Hero Section Personalizado */
+.frontend-hero {
+    background: var(--frontend-gradient);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.frontend-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.frontend-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+/* Tarjetas de Programas */
+.frontend-programas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.frontend-programa-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--frontend-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(139, 30, 63, 0.1);
+}
+
+.frontend-programa-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(139, 30, 63, 0.2);
+}
+
+.frontend-programa-header {
+    background: var(--frontend-gradient);
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.frontend-programa-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+
+.frontend-programa-card:hover .frontend-programa-header::after {
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+.frontend-programa-body {
+    padding: 2rem;
+}
+
+.frontend-programa-body ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.frontend-programa-body li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.frontend-programa-body li i {
+    color: var(--frontend-secondary);
+    width: 20px;
+}
+
+/* Sección de Características */
+.frontend-features {
+    background: var(--frontend-light);
+    padding: 4rem 0;
+    margin: 3rem 0;
+}
+
+.frontend-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.frontend-feature-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.frontend-feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.frontend-feature-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--frontend-gradient);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+}
+
+/* ========================================
+   PÁGINA DE PROFESORES
+   ======================================== */
+.profesores-page {
+    padding: 3rem 0;
+}
+
+.profesores-filters {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 0.8rem 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    font-size: 1rem;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    border-color: var(--frontend-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(139, 30, 63, 0.1);
+}
+
+.filter-group button {
+    padding: 0.8rem 2rem;
+    background: var(--frontend-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-group button:hover {
+    background: #6a1730;
+}
+
+/* Vista de Biografía Completa */
+.profesor-biografia-completa {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin-top: 2rem;
+}
+
+.profesor-header-detalle {
+    background: var(--frontend-gradient);
+    color: white;
+    padding: 3rem;
+    position: relative;
+}
+
+.profesor-avatar-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 1rem;
+}
+
+.profesor-info-detalle {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.profesor-publicaciones {
+    background: var(--frontend-light);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.publicacion-item {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid var(--frontend-secondary);
+}
+
+/* ========================================
+   PÁGINA DE CURSOS
+   ======================================== */
+.cursos-page {
+    padding: 3rem 0;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.curso-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.curso-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.curso-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.curso-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--frontend-secondary);
+    color: var(--frontend-dark);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.curso-content {
+    padding: 1.5rem;
+}
+
+.curso-meta {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.curso-meta i {
+    color: var(--frontend-primary);
+    margin-right: 0.3rem;
+}
+
+.curso-progreso {
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e1e1e1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--frontend-primary);
+    transition: width 0.3s ease;
+}
+
+/* ========================================
+   PÁGINA DE CHAT
+   ======================================== */
+.chat-page {
+    height: calc(100vh - 80px);
+    display: flex;
+    background: white;
+}
+
+.chat-sidebar {
+    width: 300px;
+    background: var(--frontend-light);
+    border-right: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-search {
+    padding: 1rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.chat-search input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.chat-contacts {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.chat-contact:hover,
+.chat-contact.active {
+    background: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.chat-contact-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-contact-info h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.chat-contact-info p {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    margin: 0;
+}
+
+.chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 1rem 2rem;
+    background: white;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background: #f8f9fa;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.message-content {
+    max-width: 70%;
+    padding: 1rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.message.sent .message-content {
+    background: var(--frontend-primary);
+    color: white;
+}
+
+.message-time {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    margin-top: 0.3rem;
+}
+
+.chat-input {
+    padding: 1rem 2rem;
+    background: white;
+    border-top: 1px solid #e1e1e1;
+    display: flex;
+    gap: 1rem;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.chat-input button {
+    padding: 0 2rem;
+    background: var(--frontend-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-input button:hover {
+    background: #6a1730;
+}
+
+/* ========================================
+   COMPONENTES DEL FRONTEND
+   ======================================== */
+
+/* Breadcrumb */
+.frontend-breadcrumb {
+    padding: 1rem 0;
+    background: transparent;
+    margin-bottom: 2rem;
+}
+
+.frontend-breadcrumb a {
+    color: var(--frontend-primary);
+    text-decoration: none;
+}
+
+.frontend-breadcrumb .separator {
+    color: var(--gray-color);
+    margin: 0 0.5rem;
+}
+
+/* Paginación */
+.frontend-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.frontend-pagination a,
+.frontend-pagination span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: white;
+    color: var(--frontend-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #e1e1e1;
+}
+
+.frontend-pagination a:hover,
+.frontend-pagination a.active {
+    background: var(--frontend-primary);
+    color: white;
+    border-color: var(--frontend-primary);
+}
+
+/* Loader */
+.frontend-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.frontend-loader::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--frontend-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Tooltips */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    background: var(--frontend-dark);
+    color: white;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+[data-tooltip]:hover:before {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 10px);
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    .frontend-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .profesor-info-detalle {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .profesor-header-detalle {
+        padding: 2rem 1rem;
+    }
+    
+    .chat-page {
+        flex-direction: column;
+    }
+    
+    .chat-sidebar {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group select,
+    .filter-group input,
+    .filter-group button {
+        width: 100%;
+    }
+    
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .message-content {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .frontend-programas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .frontend-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chat-input {
+        flex-direction: column;
+    }
+    
+    .chat-input button {
+        padding: 1rem;
+    }
+}
+
+/* ========================================
+   UTILIDADES DEL FRONTEND
+   ======================================== */
+.frontend-text-primary { color: var(--frontend-primary); }
+.frontend-text-secondary { color: var(--frontend-secondary); }
+.frontend-bg-primary { background: var(--frontend-primary); }
+.frontend-bg-secondary { background: var(--frontend-secondary); }
+.frontend-gradient-bg { background: var(--frontend-gradient); }
+
+.frontend-shadow-hover {
+    transition: all 0.3s ease;
+}
+
+.frontend-shadow-hover:hover {
+    box-shadow: var(--frontend-shadow);
+}
+
+.frontend-border-primary {
+    border: 2px solid var(--frontend-primary);
+}
+
+.frontend-rounded {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ========================================
+   ESTADOS DE CARGA Y ERROR
+   ======================================== */
+.frontend-error-state {
+    text-align: center;
+    padding: 4rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+}
+
+.frontend-error-icon {
+    font-size: 4rem;
+    color: var(--danger-color);
+    margin-bottom: 1rem;
+}
+
+.frontend-empty-state {
+    text-align: center;
+    padding: 4rem;
+    background: var(--frontend-light);
+    border-radius: 10px;
+    color: var(--gray-color);
+}
+
+.frontend-empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* ========================================
+   IMPRESIÓN
+   ======================================== */
+@media print {
+    .frontend-wrapper {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .frontend-main {
+        margin-top: 0;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+}

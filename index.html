@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNEFA Postgrado - Nueva Esparta</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="src/frontend/css/main.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="public/images/logo-unefa.png" type="image/png">
+</head>
+<body>
+<!-- Header - CORREGIDO -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="public/images/logo-unefa.png" alt="UNEFA Logo" width="60" height="60">
+            <div class="logo-text">
+                <h1>UNEFA</h1>
+                <p>Núcleo Nueva Esparta</p>
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#programas">Programas</a></li>
+                <li><a href="#profesores">Profesores</a></li>
+                <li><a href="#investigacion">Investigación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+            <a href="auth/login.php" class="btn btn-outline">Iniciar Sesión</a>
+            <a href="auth/register.php" class="btn btn-primary">Registrarse</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section - CORREGIDO -->
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <h2>Dirección de Investigación y Postgrado</h2>
+        <h1>Excelencia Académica en el Oriente del País</h1>
+        <p>Formando profesionales de cuarto nivel con compromiso social y tecnológico</p>
+        <div class="hero-buttons">
+            <a href="#programas" class="btn btn-large btn-primary">Ver Programas</a>
+            <a href="#contacto" class="btn btn-large btn-outline-light">Contáctanos</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>15+</h3>
+                <p>Programas de Postgrado</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>45+</h3>
+                <p>Profesores Investigadores</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <h3>500+</h3>
+                <p>Estudiantes Activos</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-file-alt"></i>
+                <h3>120+</h3>
+                <p>Publicaciones Científicas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programas Section -->
+    <section id="programas" class="programas">
+        <div class="container">
+            <div class="section-header">
+                <h2>Programas de Postgrado</h2>
+                <p>Oferta académica 2024 - Núcleo Nueva Esparta</p>
+            </div>
+            
+            <div class="programas-grid">
+                <!-- Doctorados -->
+                <div class="programa-card doctorado">
+                    <div class="programa-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Doctorados</h3>
+                    <ul>
+                        <li>Doctorado en Ciencias de la Educación</li>
+                        <li>Doctorado en Ciencias Gerenciales</li>
+                    </ul>
+                    <a href="#" class="btn-more">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Maestrías -->
+                <div class="programa-card maestria">
+                    <div class="programa-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Maestrías</h3>
+                    <ul>
+                        <li>Ciencias de la Educación Superior</li>
+                        <li>Gerencia de Tecnología</li>
+                        <li>Telecomunicaciones</li>
+                        <li>Análisis y Gestión de Datos</li>
+                    </ul>
+                    <a href="#" class="btn-more">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Especializaciones -->
+                <div class="programa-card especializacion">
+                    <div class="programa-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Especializaciones</h3>
+                    <ul>
+                        <li>Docencia Universitaria</li>
+                        <li>Gerencia de Proyectos</li>
+                        <li>Redes de Computadoras</li>
+                    </ul>
+                    <a href="#" class="btn-more">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Cursos -->
+                <div class="programa-card curso">
+                    <div class="programa-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Cursos de Ampliación</h3>
+                    <ul>
+                        <li>Metodología de la Investigación</li>
+                        <li>Redacción Científica</li>
+                        <li>Estadística Aplicada</li>
+                    </ul>
+                    <a href="#" class="btn-more">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profesores Section -->
+    <section id="profesores" class="profesores">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Profesores</h2>
+                <p>Personal Académico de Excelencia - P.E.I. UNEFA</p>
+            </div>
+            
+            <div class="profesores-grid">
+                <!-- Profesor 1 -->
+                <div class="profesor-card">
+                    <div class="profesor-img">
+                        <img src="public/images/profesores/profesor1.jpg" alt="Dr. Alejandro Salazar">
+                    </div>
+                    <div class="profesor-info">
+                        <h3>Dr. Alejandro Salazar</h3>
+                        <p class="titulo">PhD en Educación Digital</p>
+                        <p class="linea">Línea: Tecnología Educativa</p>
+                        <div class="profesor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                        <a href="#" class="btn-ver-perfil">Ver Biografía</a>
+                    </div>
+                </div>
+                
+                <!-- Profesor 2 -->
+                <div class="profesor-card">
+                    <div class="profesor-img">
+                        <img src="public/images/profesores/profesor2.jpg" alt="Dra. Carmen Milano">
+                    </div>
+                    <div class="profesor-info">
+                        <h3>Dra. Carmen Milano</h3>
+                        <p class="titulo">PhD en Gerencia</p>
+                        <p class="linea">Línea: Gerencia Estratégica</p>
+                        <div class="profesor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                        <a href="#" class="btn-ver-perfil">Ver Biografía</a>
+                    </div>
+                </div>
+                
+                <!-- Profesor 3 -->
+                <div class="profesor-card">
+                    <div class="profesor-img">
+                        <img src="public/images/profesores/profesor3.jpg" alt="MSc. José Gregorio León">
+                    </div>
+                    <div class="profesor-info">
+                        <h3>MSc. José Gregorio León</h3>
+                        <p class="titulo">Magister en Telecomunicaciones</p>
+                        <p class="linea">Línea: Redes y Comunicaciones</p>
+                        <div class="profesor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                        <a href="#" class="btn-ver-perfil">Ver Biografía</a>
+                    </div>
+                </div>
+                
+                <!-- Profesor 4 -->
+                <div class="profesor-card">
+                    <div class="profesor-img">
+                        <img src="public/images/profesores/profesor4.jpg" alt="Dra. Tibisay Marcano">
+                    </div>
+                    <div class="profesor-info">
+                        <h3>Dra. Tibisay Marcano</h3>
+                        <p class="titulo">PhD en Innovación Educativa</p>
+                        <p class="linea">Línea: Currículo Universitario</p>
+                        <div class="profesor-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="#"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                        <a href="#" class="btn-ver-perfil">Ver Biografía</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="src/frontend/pages/profesores.html" class="btn btn-secondary">Ver Todos los Profesores</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Líneas de Investigación -->
+    <section id="investigacion" class="investigacion">
+        <div class="container">
+            <div class="section-header">
+                <h2>Líneas de Investigación</h2>
+                <p>Áreas de desarrollo científico y académico</p>
+            </div>
+            
+            <div class="investigacion-grid">
+                <div class="linea-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Tecnología Educativa</h3>
+                    <p>Innovación pedagógica y educación digital</p>
+                </div>
+                <div class="linea-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Gerencia Organizacional</h3>
+                    <p>Liderazgo y gestión estratégica</p>
+                </div>
+                <div class="linea-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Telecomunicaciones</h3>
+                    <p>Redes y sistemas de comunicación</p>
+                </div>
+                <div class="linea-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Ciencias Básicas</h3>
+                    <p>Investigación aplicada y desarrollo</p>
+                </div>
+                <div class="linea-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Desarrollo Sustentable</h3>
+                    <p>Gestión ambiental y sostenibilidad</p>
+                </div>
+                <div class="linea-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Educación a Distancia</h3>
+                    <p>TIC aplicadas a la educación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="contacto-wrapper">
+                <div class="contacto-info">
+                    <h2>Información de Contacto</h2>
+                    <p>Estamos ubicados en el corazón de la isla de Margarita</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Vereda Sur, Av. Jóvito Villalba, Sector El Piache<br>
+                            Juan Griego, Municipio Marcano<br>
+                            Estado Nueva Esparta - Venezuela</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfonos</h4>
+                            <p>(0295) 123.45.67 / 123.45.68</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>postgrado.ne@unefa.edu.ve</p>
+                            <p>coordinacion.postgrado@unefa.edu.ve</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 8:00 am - 4:00 pm<br>
+                            Sábados: 8:00 am - 12:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contacto-form">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form action="api/contacto.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="asunto" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.843547463835!2d-63.965123685219!3d11.083569392132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c3213aab8a1e6b7%3A0x8c3213aab8a1e6b7!2sUNEFA%20Nueva%20Esparta!5e0!3m2!1ses!2sve!4v1620000000000!5m2!1ses!2sve" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="public/images/logo-unefa.png" alt="UNEFA" class="footer-logo">
+                    <p>Formando profesionales integrales para el desarrollo de la nación</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/unefavdi"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/Unefa_VEN"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/unefanucleonuevaesparta_ve/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCU1YFZgV-ENQkfHRspsK9nA"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#programas">Programas</a></li>
+                        <li><a href="#profesores">Profesores</a></li>
+                        <li><a href="#investigacion">Investigación</a></li>
+                        <li><a href="auth/login.html">Acceso al Sistema</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Programas</h4>
+                    <ul>
+                        <li><a href="#">Doctorados</a></li>
+                        <li><a href="#">Maestrías</a></li>
+                        <li><a href="#">Especializaciones</a></li>
+                        <li><a href="#">Cursos de Ampliación</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Horario de Clases</h4>
+                    <ul>
+                        <li><i class="fas fa-clock"></i> Semana: 6:00 pm - 10:00 pm</li>
+                        <li><i class="fas fa-clock"></i> Sábados: 8:00 am - 4:00 pm</li>
+                        <li><i class="fas fa-calendar"></i> Inscripciones Abiertas</li>
+                        <li><i class="fas fa-calendar-alt"></i> Próximo ingreso: Sept 2024</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNEFA Núcleo Nueva Esparta - Dirección de Investigación y Postgrado. Todos los derechos reservados.</p>
+                <p>Desarrollado por: Dirección de Tecnología UNEFA - NE</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="public/js/main.js"></script>
+    <script src="src/frontend/js/navigation.js"></script>
+</body>
+</html>
